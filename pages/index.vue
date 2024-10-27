@@ -67,7 +67,7 @@ useHead(
 }
 
 header {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 12px 32px;
     position: fixed;
     top: 0;
