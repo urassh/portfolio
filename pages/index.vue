@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const SITE_TITLE = "urassh@engin";
+import Header from './header.vue';
+
+const SITE_TITLE = "urassh@developer";
 
 useHead(
     () => ({
@@ -15,9 +17,7 @@ useHead(
 </script>
 
 <template>
-    <header>
-        <h1 class="header-title">urassh@developer</h1>
-    </header>
+    <Header />
 
     <main id="back-pattern" class="boxes">
         <div id="hero">
