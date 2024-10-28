@@ -47,7 +47,7 @@ useHead(
         linear-gradient(#ffffff2b 1px, transparent 1px),
         linear-gradient(to right, #ffffff2b 1px, #000 1px);
     background-size: 16px 16px;
-    animation: moveUV 55s linear infinite;
+    animation: moveUV 50s linear infinite;
 }
 
 @keyframes moveUV {
