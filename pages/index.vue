@@ -106,7 +106,4 @@ header {
         letter-spacing: 0.08em;
     }
 }
-
-
-
 </style>
