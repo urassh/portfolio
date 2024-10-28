@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './header.vue';
 import Hero from './hero.vue';
+import About from './about.vue';
 
 const SITE_TITLE = "urassh@developer";
 
@@ -22,6 +23,7 @@ useHead(
 
     <main id="back-pattern" class="boxes">
         <Hero />
+        <About />
     </main>
 </template>
 
@@ -35,13 +37,9 @@ useHead(
 }
 
 #back-pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     background-color: #000;
-    z-index: -1;
+    padding: 64px 0;
 }
 
 .boxes {
@@ -49,7 +47,7 @@ useHead(
         linear-gradient(#ffffff2b 1px, transparent 1px),
         linear-gradient(to right, #ffffff2b 1px, #000 1px);
     background-size: 16px 16px;
-    animation: moveUV 60s linear infinite;
+    animation: moveUV 55s linear infinite;
 }
 
 @keyframes moveUV {
