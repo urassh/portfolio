@@ -33,7 +33,7 @@ useHead(
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 #back-pattern {
