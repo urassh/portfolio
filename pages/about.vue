@@ -2,9 +2,11 @@
     <div id="about">
         <h1>About</h1>
         <div class="container">
-            <div class="image-container">
-                <img src="/public/urassh.jpg" alt="">
-            </div>
+            <div class="picture-container">
+                <div class="image-container">
+                    <img src="/public/urassh.jpg" alt="">
+                </div>
+            </div>            
 
             <div class="profile-container">
                 <h2>Shuto Urayama</h2>
@@ -25,7 +27,7 @@
     padding: 4vw 8vw;
 
     h1 {
-        font-size: 10vw; /* ビューポート幅の10% */
+        font-size: 8vw;
         color: transparent;
         -webkit-text-stroke: 0.1vw #FFF;
     }
@@ -33,42 +35,75 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        gap: 6vw;
-        .image-container {
-            margin-top: 20px;
-            width: 240px;
-            height: 240px;
-            transform: rotate(-10deg);
-            background-color: red;
-            overflow: hidden;
-            border-radius: 24px;
+        justify-content: space-around;
+        
+        .picture-container {
+            width: 20%;
             position: relative;
-            img {
-                position: absolute;
-                top: -10%;
-                right: -28px;
-                width: 120%;
-                height: 120%;
-                
-                object-fit: cover;
-                transform: rotate(10deg);
+            margin-top: 20px;
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }  
+            .image-container {
+                width: 240px;
+                height: 240px;
+                transform: rotate(-10deg);
+                overflow: hidden;
+                border-radius: 24px;
+                position: relative;
+                z-index: 1;
+
+                img {
+                    position: absolute;
+                    top: -10%;
+                    right: -28px;
+                    width: 120%;
+                    height: 120%;
+                    
+                    object-fit: cover;
+                    transform: rotate(10deg);
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                top: 0;
+                content: "";
+                display: block;
+                transform: rotate(-85deg);
+                width: 240px;
+                height: 240px;
+                border:#ffffffac solid 0.2vw;
+                border-radius: 24px;
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                content: "";
+                display: block;
+                transform: rotate(-70deg);
+                width: 240px;
+                height: 240px;
+                border:#ffffffac solid 0.2vw;
+                border-radius: 24px;
+            }
         }
+        
+
         .profile-container {
-            flex: 1;
+            width: 50%;
             h2 {
                 font-size: 4vw;
                 margin-bottom: 2vw;
-                text-shadow: 0.3vw 0.3vw 0.3vw rgba(219, 41, 255, 0.4);
+                text-shadow: black;
             }
 
             p {
-                font-size: 1.2vw;
-                font-weight: lighter;
+                font-size: 1vw;
+                font-weight: thin;
                 line-height: 2vw;
                 opacity: 0.8;
             }
