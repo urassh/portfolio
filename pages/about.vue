@@ -25,6 +25,7 @@
 <style scoped>
 #about {
     padding: 4vw 8vw;
+    margin-bottom: 16vw;
 
     h1 {
         font-size: 8vw;
@@ -43,8 +44,8 @@
             margin-top: 20px;
 
             .image-container {
-                width: 240px;
-                height: 240px;
+                width: 16vw;
+                height: 16vw;
                 transform: rotate(-10deg);
                 overflow: hidden;
                 border-radius: 24px;
@@ -73,8 +74,8 @@
                 content: "";
                 display: block;
                 transform: rotate(-85deg);
-                width: 240px;
-                height: 240px;
+                width: 16vw;
+                height: 16vw;
                 border:#ffffffac solid 0.2vw;
                 border-radius: 24px;
             }
@@ -85,8 +86,8 @@
                 content: "";
                 display: block;
                 transform: rotate(-70deg);
-                width: 240px;
-                height: 240px;
+                width: 16vw;
+                height: 16vw;
                 border:#ffffffac solid 0.2vw;
                 border-radius: 24px;
             }
@@ -94,7 +95,7 @@
         
 
         .profile-container {
-            width: 50%;
+            width: 55%;
             h2 {
                 font-size: 4vw;
                 margin-bottom: 2vw;
@@ -103,9 +104,11 @@
 
             p {
                 font-size: 1vw;
-                font-weight: thin;
+                font-weight: lighter;
                 line-height: 2vw;
                 opacity: 0.8;
+                text-wrap: balance;
+                word-break: auto-phrase;
             }
         }
     }

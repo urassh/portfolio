@@ -2,6 +2,7 @@
 import Header from './header.vue';
 import Hero from './hero.vue';
 import About from './about.vue';
+import Skill from './skill.vue';
 
 const SITE_TITLE = "urassh@developer";
 
@@ -24,6 +25,7 @@ useHead(
     <main id="back-pattern" class="boxes">
         <Hero />
         <About />
+        <Skill />
     </main>
 </template>
 
