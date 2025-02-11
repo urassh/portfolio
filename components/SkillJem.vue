@@ -29,21 +29,22 @@ defineProps({
 .skill-jem__container {
     display: flex;
     align-items: center;
-    gap: 2.4vw;
-    margin-bottom: 4vw;
+    gap: 32px;
+    margin-bottom: 32px;
+    width: 300px;
 
     .text {
         display: flex;
         flex-direction: column;
-        gap: 0.8vw;
+        gap: 12px;
 
         .title {
-            font-size: 1.6vw;
+            font-size: 20px;
             font-weight: bold;
         }
 
         .year {
-            font-size: 1vw;
+            font-size: 12px;
             opacity: 0.6;
         }
     }
