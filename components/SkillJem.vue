@@ -38,7 +38,7 @@ defineProps({
         gap: 0.8vw;
 
         .title {
-            font-size: 1.8vw;
+            font-size: 1.6vw;
             font-weight: bold;
         }
 
@@ -50,8 +50,8 @@ defineProps({
 }
 
 .skill-image {
-    width: 8vw;
-    height: 8vw;
+    width: 6vw;
+    height: 6vw;
     border-radius: 50%;
     object-fit: cover;
 }

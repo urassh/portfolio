@@ -24,8 +24,9 @@
     }
 
     .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4vw;
     }
 
 
