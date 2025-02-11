@@ -33,14 +33,47 @@ useHead(
         <h2>Connection</h2>
 
         <ConnectionJem
-            connectionName="株式会社サンプル"
-            position="エンジニア"
-            startDate="2020-01-01"
-            endDate="2023-12-31"
+            connectionName="株式会社ライフイズテック"
+            position="Mentor"
+            startDate="2023.4"
             :achivements="[
-                'プロジェクトAの成功',
-                '新製品Bの開発',
-                'チームCのリーダーシップ'
+                'Minecraftプログラミングコース',
+                'Unityゲームプログラミングコース',
+                'iPhoneプログラミングコース'
+            ]"
+        />
+
+        <ConnectionJem
+            connectionName="株式会社VoiceUtopia"
+            position="Flutter Engineer"
+            startDate="2024.1"
+            endDate="2024.6"
+            :achivements="[
+                'アプリUIの作成',
+                'テスト実装',
+                'API通信の実装'
+            ]"
+        />
+
+        <ConnectionJem
+            connectionName="株式会社Progate"
+            position="Support"
+            startDate="2024.6"
+            :achivements="[
+                'Progateハッカソン 学生メンター',
+                '都市大ハッカソン協賛',
+                '学生アンバサダー'
+            ]"
+        />
+
+        <ConnectionJem
+            connectionName="株式会社ラブグラフ"
+            position="Engineer"
+            startDate="2024.11"
+            :achivements="[
+                'メモ機能の開発',
+                '2要素認証の実装',
+                ''
             ]"
         />
     </div>
@@ -64,7 +97,7 @@ useHead(
         linear-gradient(#8888882b 1px, transparent 1px),
         linear-gradient(to right, #8888882b 1px, #fff 1px);
     background-size: 16px 16px;
-    animation: moveUV 10s linear infinite;
+    animation: moveUV 50s linear infinite;
 
     display: flex;
     flex-direction: column;
