@@ -31,7 +31,7 @@ defineProps({
     align-items: center;
     gap: 32px;
     margin-bottom: 32px;
-    width: 300px;
+    width: 280px;
 
     .text {
         display: flex;
@@ -51,8 +51,8 @@ defineProps({
 }
 
 .skill-image {
-    width: 6vw;
-    height: 6vw;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }

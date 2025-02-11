@@ -1,6 +1,7 @@
 <template>
     <div id="about">
-        <h1>About</h1>
+        <img src="/public/about.png" alt="" class="title">
+
         <div class="container">
             <div class="picture-container">
                 <div class="image-container">
@@ -24,28 +25,28 @@
 
 <style scoped>
 #about {
-    padding: 4vw 8vw;
-    margin-bottom: 16vw;
+    padding: 90px;
+    margin-bottom: 200px;
 
-    h1 {
-        font-size: 8vw;
-        color: transparent;
-        -webkit-text-stroke: 0.1vw #FFF;
+    .title {
+        height: 80px;
+        margin-bottom: 4vw;
     }
 
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        gap: 42px;
         
         .picture-container {
-            width: 20%;
+            width: 240px;
             position: relative;
             margin-top: 20px;
 
             .image-container {
-                width: 16vw;
-                height: 16vw;
+                width: 200px;
+                height: 200px;
                 transform: rotate(-10deg);
                 overflow: hidden;
                 border-radius: 24px;
@@ -74,10 +75,11 @@
                 content: "";
                 display: block;
                 transform: rotate(-85deg);
-                width: 16vw;
-                height: 16vw;
-                border:#ffffffac solid 0.2vw;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(45deg, rgba(255, 0, 255, 0.6), rgba(0, 255, 255, 0.6));
                 border-radius: 24px;
+                filter: blur(16px);
             }
 
             &::after {
@@ -86,26 +88,28 @@
                 content: "";
                 display: block;
                 transform: rotate(-70deg);
-                width: 16vw;
-                height: 16vw;
-                border:#ffffffac solid 0.2vw;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(45deg, rgba(0, 255, 255, 0.6), rgba(255, 0, 255, 0.6));
                 border-radius: 24px;
+                filter: blur(16px);
             }
         }
         
 
         .profile-container {
-            width: 55%;
+            width: 500px;
+
             h2 {
-                font-size: 4vw;
+                font-size: 40px;
                 margin-bottom: 2vw;
                 text-shadow: black;
             }
 
             p {
-                font-size: 1vw;
+                font-size: 12px;
                 font-weight: lighter;
-                line-height: 2vw;
+                line-height: 24px;
                 opacity: 0.8;
                 text-wrap: balance;
                 word-break: auto-phrase;
@@ -114,26 +118,10 @@
     }
 
     /* スマートフォンなどの小さな画面向け */
-    @media (max-width: 768px) {
-        padding: 8vw 4vw;
-
-        h1 {
-            font-size: 15vw;
-            -webkit-text-stroke: 0.2vw #FFF;
-        }
-
-        .profile-container {
-            h2 {
-                font-size: 8vw;
-                margin-bottom: 4vw;
-            }
-
-            p {
-                font-size: 4vw;
-                line-height: 5vw;
-                opacity: 0.8;
-            }
-        }
+    @media (max-width: 900px) {
+        .container {
+            justify-content: flex-start;
+        }        
     }
 }
 </style>
