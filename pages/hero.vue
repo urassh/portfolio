@@ -32,5 +32,11 @@
         font-weight: lighter;
         letter-spacing: 0.08em;
     }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 48px;
+        }
+    }
 }
 </style>

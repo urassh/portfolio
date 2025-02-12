@@ -44,7 +44,8 @@ defineProps({
 
 <style scoped>
 #connection-jem {
-    width: 800px;
+    width: 95%;
+    max-width: 800px;
     padding: 32px;
     border: 1px solid #888;
     border-radius: 16px;
