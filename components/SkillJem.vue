@@ -9,7 +9,7 @@ defineProps({
         required: true,
     },
     years: {
-        type: [String, Number],
+        type: Number,
         required: true,
     },
 });
@@ -20,7 +20,7 @@ defineProps({
         <img :src="`/skills/${imageName}`" :alt="title" class="skill-image" />
         <div class="text">
             <h3 class="title">{{ title }}</h3>
-            <p class="year">{{ years }} years</p>
+            <p class="year">{{ years }} {{ years == 1 ? "year" : "years"}}</p>
         </div>
     </div>
 </template>
