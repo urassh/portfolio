@@ -16,6 +16,7 @@
 <style scoped>
 #skill {
     padding: 4vw 8vw;
+    margin-bottom: 200px;
 
     .title {
         height: 80px;
