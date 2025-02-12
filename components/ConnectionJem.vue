@@ -23,7 +23,7 @@ defineProps({
 </script>
 
 <template>
-    <div id="connection">
+    <div id="connection-jem">
         <h3 class="connection-title">{{ connectionName }}</h3>
 
         <p class="connection-date">
@@ -43,7 +43,7 @@ defineProps({
 </template>
 
 <style scoped>
-#connection {
+#connection-jem {
     width: 800px;
     padding: 32px;
     border: 1px solid #888;
