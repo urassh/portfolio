@@ -3,7 +3,8 @@ import Header from './header.vue';
 import Hero from './hero.vue';
 import About from './about.vue';
 import Skill from './skill.vue';
-import ConnectionJem from '~/components/ConnectionJem.vue';
+import Connection from './connection.vue';
+import Works from './works.vue';
 
 const SITE_TITLE = "urassh@developer";
 
@@ -27,55 +28,11 @@ useHead(
         <Hero />
         <About />
         <Skill />
+        <Works />
     </div>
 
-    <div class="white-boxes" id="connection">
-        <h2>Connection</h2>
-
-        <ConnectionJem
-            connectionName="株式会社ライフイズテック"
-            position="Mentor"
-            startDate="2023.4"
-            :achivements="[
-                'Minecraftプログラミングコース',
-                'Unityゲームプログラミングコース',
-                'iPhoneプログラミングコース'
-            ]"
-        />
-
-        <ConnectionJem
-            connectionName="株式会社VoiceUtopia"
-            position="Flutter Engineer"
-            startDate="2024.1"
-            endDate="2024.6"
-            :achivements="[
-                'アプリUIの作成',
-                'テスト実装',
-                'API通信の実装'
-            ]"
-        />
-
-        <ConnectionJem
-            connectionName="株式会社Progate"
-            position="Support"
-            startDate="2024.6"
-            :achivements="[
-                'Progateハッカソン 学生メンター',
-                '都市大ハッカソン協賛',
-                '学生アンバサダー'
-            ]"
-        />
-
-        <ConnectionJem
-            connectionName="株式会社ラブグラフ"
-            position="Engineer"
-            startDate="2024.11"
-            :achivements="[
-                'メモ機能の開発',
-                '2要素認証の実装',
-                ''
-            ]"
-        />
+    <div class="white-boxes">
+        <Connection />
     </div>
 </template>
 
@@ -98,15 +55,6 @@ useHead(
         linear-gradient(to right, #8888882b 1px, #fff 1px);
     background-size: 16px 16px;
     animation: moveUV 50s linear infinite;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-
-    h2 {
-        font-size: 40px;
-    }
 }
 
 .white-boxes :is(h1, h2, h3, h4, h5, h6, p, span, a, li, div) {
