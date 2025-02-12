@@ -25,7 +25,7 @@
 
 <style scoped>
 #about {
-    padding: 90px;
+    padding: 4vw 8vw;
     margin-bottom: 200px;
 
     .title {
