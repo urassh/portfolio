@@ -124,19 +124,41 @@
 
 @keyframes rotateBefore {
     0% {
+        transform: scale(1);
         transform: rotate(-85deg);
     }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
     100% {
-        transform: rotate(275deg); /* -85deg + 360deg */
+        transform: scale(1);
+        transform: rotate(275deg);
     }
 }
 
 @keyframes rotateAfter {
     0% {
+        transform: scale(1);
         transform: rotate(-70deg);
     }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
     100% {
-        transform: rotate(290deg); /* -70deg + 360deg */
+        transform: scale(1);
+        transform: rotate(290deg);
     }
 }
 
