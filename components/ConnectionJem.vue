@@ -73,6 +73,29 @@ defineProps({
     li {
         font-weight: bold;
         margin-bottom: 12px;
+    }   
+}
+
+@media (max-width: 600px) {
+    #connection-jem {
+        padding: 16px;
+
+        .connection-title {
+            font-size: 32px;
+        }
+
+        .connection-position {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 10px;
+        }
     }
+
+    
+   
+
+    
 }
 </style>

@@ -162,5 +162,13 @@
     }
 }
 
+@media (max-width: 600px) {
+    #about {
+        .title {
+            height: 60px;
+            margin-bottom: 4vw;
+        }
+    }
+}
 
 </style>
