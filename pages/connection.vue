@@ -3,7 +3,7 @@
         <h2>Connection</h2>
 
         <ConnectionJem
-            connectionName="株式会社ライフイズテック"
+            connectionName="ライフイズテック株式会社"
             position="Mentor"
             startDate="2023.4"
             :achivements="[
