@@ -81,21 +81,20 @@ defineProps({
         padding: 16px;
 
         .connection-title {
-            font-size: 32px;
+            font-size: 20px;
+        }
+
+        .connection-date {
+            font-size: 8px;
         }
 
         .connection-position {
-            font-size: 24px;
+            font-size: 18px;
         }
 
-        p {
-            font-size: 10px;
+        li {
+            font-size: 12px;
         }
     }
-
-    
-   
-
-    
 }
 </style>
