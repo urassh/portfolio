@@ -25,7 +25,7 @@
 
 <style scoped>
 #about {
-    padding: 90px;
+    padding: 4vw 8vw;
     margin-bottom: 200px;
 
     .title {
@@ -162,5 +162,13 @@
     }
 }
 
+@media (max-width: 600px) {
+    #about {
+        .title {
+            height: 60px;
+            margin-bottom: 4vw;
+        }
+    }
+}
 
 </style>

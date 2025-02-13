@@ -22,4 +22,10 @@ header {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 24px;
+    }
+}
 </style>

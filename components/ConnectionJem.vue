@@ -44,7 +44,8 @@ defineProps({
 
 <style scoped>
 #connection-jem {
-    width: 800px;
+    width: 95%;
+    max-width: 800px;
     padding: 32px;
     border: 1px solid #888;
     border-radius: 16px;
@@ -72,6 +73,28 @@ defineProps({
     li {
         font-weight: bold;
         margin-bottom: 12px;
+    }   
+}
+
+@media (max-width: 600px) {
+    #connection-jem {
+        padding: 16px;
+
+        .connection-title {
+            font-size: 20px;
+        }
+
+        .connection-date {
+            font-size: 8px;
+        }
+
+        .connection-position {
+            font-size: 18px;
+        }
+
+        li {
+            font-size: 12px;
+        }
     }
 }
 </style>

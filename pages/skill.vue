@@ -28,10 +28,14 @@
         flex-wrap: wrap;
         gap: 4vw;
     }
+}
 
-
-    @media (max-width: 768px) {
-        
+@media (max-width: 600px) {
+    #skill {
+        .title {
+            height: 60px;
+            margin-bottom: 4vw;
+        }
     }
 }
 </style>
