@@ -7,7 +7,7 @@ import Connection from './connection.vue';
 import Works from './works.vue';
 import Footer from './footer.vue';
 
-const SITE_TITLE = "urassh@developer";
+const SITE_TITLE = "うらっしゅのポートフォリオサイト";
 
 useHead(
     () => ({
