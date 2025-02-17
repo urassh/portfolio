@@ -46,12 +46,12 @@
         a {
             text-decoration: none;
             font-size: 24px;
+            font-weight: bold;
             transition: transform 0.2s ease, font-weight 0.2s ease-in-out, border-bottom 0.2s ease;
         }
 
         a:hover {
             transform: scale(1.1);
-            font-weight: bold;
             border-bottom: 1px solid #333;
         }
     }
