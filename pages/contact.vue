@@ -41,16 +41,17 @@
         align-items: start;
         gap: 16px;
         width: 80%;
-        
 
         a {
             text-decoration: none;
             font-size: 24px;
             font-weight: bold;
+            opacity: 0.8;
             transition: transform 0.2s ease, font-weight 0.2s ease-in-out, border-bottom 0.2s ease;
         }
 
         a:hover {
+            opacity: 1;
             transform: scale(1.1);
             border-bottom: 1px solid #333;
         }
