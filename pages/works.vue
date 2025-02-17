@@ -19,19 +19,19 @@ const closeModal = () => {
                 <img src="/public/works/Gitagram.png" alt="gitagram">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+                <img src="/public/works/WAGIRI.png" alt="gitagram">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+                <img src="/public/works/AIStrike.png" alt="gitagram">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+                <img src="/public/works/Zenn.png" alt="gitagram">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+                <img src="/public/works/Stampy.png" alt="gitagram">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+                <img src="/public/works/Game.png" alt="gitagram">
             </div>
         </div>
 
