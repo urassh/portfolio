@@ -36,21 +36,19 @@ const closeModal = () => {
         </div>
 
         <!-- モーダル -->
-        <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
-            <div class="modal" @click.stop>
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+        <transition name="fade">
+            <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
+                <div class="modal" @click.stop>
+                    <img src="/public/works/Gitagram.png" alt="gitagram">
 
-                <div class="content">
-                    <h3>Gitagram</h3>
-                    <p>顧客を身近に感じられる社内チャット</p>
-                    <p>ビジネスをしているなら、顧客がいるならチャネルトークで会話をしてみましょう</p>
-
-                    <!-- <button @click="closeModal">閉じる</button> -->
+                    <div class="content">
+                        <h3>Gitagram</h3>
+                        <p>顧客を身近に感じられる社内チャット</p>
+                        <p>ビジネスをしているなら、顧客がいるならチャネルトークで会話をしてみましょう</p>
+                    </div>
                 </div>
-                
-                
             </div>
-        </div>
+        </transition>
     </div>
 </template>
 
@@ -169,6 +167,21 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.fade-enter-to, .fade-leave-from {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 @media (max-width: 600px) {
     #works {
