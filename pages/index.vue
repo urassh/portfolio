@@ -6,6 +6,7 @@ import Skill from './skill.vue';
 import Connection from './connection.vue';
 import Works from './works.vue';
 import Footer from './footer.vue';
+import Contact from './contact.vue';
 
 const SITE_TITLE = "うらっしゅのポートフォリオサイト";
 
@@ -34,6 +35,8 @@ useHead(
 
     <div class="white-boxes">
         <Connection />
+
+        <Contact />5
     </div>
 
     <Footer />

@@ -55,6 +55,8 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    margin-top: 40px;
+    margin-bottom: 80px;
 
     h2 {
         font-size: 40px;
