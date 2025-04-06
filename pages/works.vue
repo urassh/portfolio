@@ -35,9 +35,7 @@ const closeModal = () => {
             </div>
         </div>
 
-        <!-- 常にレンダリングされるオーバーレイ -->
         <div class="modal-overlay" :class="{ active: isModalOpen }" @click="closeModal">
-            <!-- モーダル本体のみ transition 適用 -->
             <transition name="fade">
                 <div v-if="isModalOpen" class="modal" @click.stop>
                     <img src="/public/works/Gitagram.png" alt="gitagram">
