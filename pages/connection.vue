@@ -46,6 +46,15 @@
                 ''
             ]"
         />
+
+        <ConnectionJem
+            connectionName="42Tokyo"
+            position="Student"
+            startDate="2025.03"
+            :achivements="[
+                'Pisine 合格'
+            ]"
+        />
     </div>
 </template>
 
