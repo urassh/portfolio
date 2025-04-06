@@ -12,7 +12,6 @@
             <SkillJem imageName="aws.png" title="AWS" :years=1 />
             <SkillJem imageName="docker.png" title="Docker" :years=1 />
             <SkillJem imageName="rails.png" title="Ruby on Rails" :years=1 />
-            
         </div>
     </div>
 </template>
