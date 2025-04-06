@@ -16,6 +16,7 @@ const closeModal = () => {
 const gitagram_work: Work = {
     slug: "gitagram",
     title: "Gitagram",
+    image: "/works/Gitagram.png",
     subtitle: "GitHubの情報を可視化するアプリ",
     description: "GitHubのリポジトリの情報を可視化するアプリです。リポジトリの情報を取得し、グラフやチャートで表示します。",
 };
@@ -26,22 +27,22 @@ const gitagram_work: Work = {
         <img src="/public/works.png" alt="" class="title">
         <div class="container">
             <div class="card" @click="openModal(gitagram_work)">
-                <img src="/public/works/Gitagram.png" alt="gitagram">
+                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
             </div>
             <div class="card" @click="openModal(gitagram_work)">
-                <img src="/public/works/WAGIRI.png" alt="WAGIRI">
+                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
             </div>
             <div class="card" @click="openModal(gitagram_work)">
-                <img src="/public/works/AIStrike.png" alt="AIStrike">
+                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
             </div>
             <div class="card" @click="openModal(gitagram_work)">
-                <img src="/public/works/Zenn.png" alt="Zenn">
+                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
             </div>
             <div class="card" @click="openModal(gitagram_work)">
-                <img src="/public/works/Stampy.png" alt="Stampy">
+                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
             </div>
             <div class="card" @click="openModal(gitagram_work)">
-                <img src="/public/works/Game.png" alt="Game">
+                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
             </div>
         </div>
 
