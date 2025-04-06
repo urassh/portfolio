@@ -24,10 +24,6 @@ onMounted(async () => {
         <div class="container">
             <div v-for="work in works" :key="work.slug" class="card" @click="openModal(work)">
                 <img :src="work.image" :alt="work.slug">
-                <div class="content">
-                    <h3>{{ work.title }}</h3>
-                    <p>{{ work.subtitle }}</p>
-                </div>
             </div>
         </div>
 
