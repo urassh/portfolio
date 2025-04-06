@@ -1,17 +1,19 @@
+<script setup lang="ts">
+import SkillJem from "~/components/SkillJem.vue";
+
+const { skills, fetchSkills } = useSkillsFetch();
+
+onMounted(async () => {
+    await fetchSkills();
+});
+</script>
+
 <template>
     <div id="skill">
         <img src="/public/skills.png" alt="" class="title">
 
         <div class="container">
-            <SkillJem imageName="swift.png" title="Swift" :years=4 />
-            <SkillJem imageName="flutter.png" title="Flutter" :years=2 />
-            <SkillJem imageName="java.png" title="Java" :years=3 />
-            <SkillJem imageName="unity.png" title="Unity" :years=2 />
-            <SkillJem imageName="nuxt.png" title="Nuxt" :years=1 />
-            <SkillJem imageName="firebase.png" title="Firebase" :years=3 />
-            <SkillJem imageName="aws.png" title="AWS" :years=1 />
-            <SkillJem imageName="docker.png" title="Docker" :years=1 />
-            <SkillJem imageName="rails.png" title="Ruby on Rails" :years=1 />
+            <SkillJem v-for="skill in skills" :key="skill.slug" v-bind="skill" />
         </div>
     </div>
 </template>
