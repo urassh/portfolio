@@ -20,5 +20,10 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'aws-lambda',
     serveStatic: true,
-  }
+  },
+  runtimeConfig: {
+    public: {
+      imageBaseUrl: process.env.IMAGE_BASE_URL || '',
+    },
+  },
 })

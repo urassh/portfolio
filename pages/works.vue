@@ -3,7 +3,7 @@ import { ref } from "vue";
 import type { Work } from "~/types/work";
 
 const selectedWork = ref<Work | null>(null);
-
+const { works, fetchWorks } = useWorksFetch();
 const isModalOpen = ref(false);
 const openModal = (work: Work) => {
     selectedWork.value = work;
@@ -13,43 +13,28 @@ const closeModal = () => {
     isModalOpen.value = false;
 };
 
-const gitagram_work: Work = {
-    slug: "gitagram",
-    title: "Gitagram",
-    image: "/works/Gitagram.png",
-    subtitle: "GitHubの情報を可視化するアプリ",
-    description: "GitHubのリポジトリの情報を可視化するアプリです。リポジトリの情報を取得し、グラフやチャートで表示します。",
-};
+onMounted(async () => {
+    await fetchWorks();
+});
 </script>
 
 <template>
     <div id="works">
         <img src="/public/works.png" alt="" class="title">
         <div class="container">
-            <div class="card" @click="openModal(gitagram_work)">
-                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
-            </div>
-            <div class="card" @click="openModal(gitagram_work)">
-                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
-            </div>
-            <div class="card" @click="openModal(gitagram_work)">
-                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
-            </div>
-            <div class="card" @click="openModal(gitagram_work)">
-                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
-            </div>
-            <div class="card" @click="openModal(gitagram_work)">
-                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
-            </div>
-            <div class="card" @click="openModal(gitagram_work)">
-                <img :src="gitagram_work.image" :alt="gitagram_work.slug">
+            <div v-for="work in works" :key="work.slug" class="card" @click="openModal(work)">
+                <img :src="work.image" :alt="work.slug">
+                <div class="content">
+                    <h3>{{ work.title }}</h3>
+                    <p>{{ work.subtitle }}</p>
+                </div>
             </div>
         </div>
 
         <div class="modal-overlay" :class="{ active: isModalOpen }" @click="closeModal">
             <transition name="fade">
                 <div v-if="isModalOpen" class="modal" @click.stop>
-                    <img src="/public/works/Gitagram.png" alt="{{ selectedWork!.slug }}">
+                    <img :src="selectedWork!.image" :alt="selectedWork!.slug">
                     <div class="content">
                         <h3>{{ selectedWork!.title }}</h3>
                         <p>{{ selectedWork!.subtitle }}</p>
