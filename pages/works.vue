@@ -19,98 +19,98 @@ const closeModal = () => {
                 <img src="/public/works/Gitagram.png" alt="gitagram">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/WAGIRI.png" alt="gitagram">
+                <img src="/public/works/WAGIRI.png" alt="WAGIRI">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/AIStrike.png" alt="gitagram">
+                <img src="/public/works/AIStrike.png" alt="AIStrike">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Zenn.png" alt="gitagram">
+                <img src="/public/works/Zenn.png" alt="Zenn">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Stampy.png" alt="gitagram">
+                <img src="/public/works/Stampy.png" alt="Stampy">
             </div>
             <div class="card" @click="openModal()">
-                <img src="/public/works/Game.png" alt="gitagram">
+                <img src="/public/works/Game.png" alt="Game">
             </div>
         </div>
 
-        <!-- モーダル -->
-        <transition name="fade">
-            <div v-if="isModalOpen" class="modal-overlay" @click="closeModal">
-                <div class="modal" @click.stop>
+        <!-- 常にレンダリングされるオーバーレイ -->
+        <div class="modal-overlay" :class="{ active: isModalOpen }" @click="closeModal">
+            <!-- モーダル本体のみ transition 適用 -->
+            <transition name="fade">
+                <div v-if="isModalOpen" class="modal" @click.stop>
                     <img src="/public/works/Gitagram.png" alt="gitagram">
-
                     <div class="content">
                         <h3>Gitagram</h3>
                         <p>顧客を身近に感じられる社内チャット</p>
                         <p>ビジネスをしているなら、顧客がいるならチャネルトークで会話をしてみましょう</p>
                     </div>
                 </div>
-            </div>
-        </transition>
+            </transition>
+        </div>
     </div>
 </template>
 
 <style scoped>
 #works {
     padding: 4vw 8vw;
+}
 
-    .title {
-        height: 80px;
-        margin-bottom: 4vw;
-    }
+.title {
+    height: 80px;
+    margin-bottom: 4vw;
+}
 
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-    }
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
 
-    .card {
-        position: relative;
-        width: 400px;
-        aspect-ratio: 5 / 3.2;
-        border-radius: 12px;
-        overflow: hidden;
-        transition:box-shadow 0.3s ease, transform 1.3s ease-in-out;
-        transition-timing-function: ease;
-        cursor: pointer;
+.card {
+    position: relative;
+    width: 400px;
+    aspect-ratio: 5 / 3.2;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 1.3s ease-in-out;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
 
-        &:hover {
-            transform: scale(1.05);
-            box-shadow:0 0 12px rgb(0, 110, 255, 0.7), 0 2px 5px rgba(0, 0, 0, 0.6);
-        }
-    }
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 110, 255, 0.7), 0 2px 5px rgba(0, 0, 0, 0.6);
+}
 
-    .card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .card::after {
-        position: absolute;
-        display: block;
-        box-sizing: content-box;
-        content: "";
-        opacity: 0;
-        left: 0;
-        top: 50%;
-        width: 100%;
-        height: 0;
-        background: linear-gradient(100deg, #C717FC 0%, #A817FC 50.25%, #8A17FC 68.5%, #5CFFFF 99.99%) no-repeat;
-        background-size: 5px 100%;
-        background-position: left, right;
-        transition: top 0.6s, height 0.6s, opacity 0.6s;
-        transition-timing-function: ease;
-    }
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .card:hover::after {
-        top: 0;
-        height: 100%;
-        opacity: 1;
-    }
+.card::after {
+    position: absolute;
+    display: block;
+    box-sizing: content-box;
+    content: "";
+    opacity: 0;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(100deg, #C717FC 0%, #A817FC 50.25%, #8A17FC 68.5%, #5CFFFF 99.99%) no-repeat;
+    background-size: 5px 100%;
+    background-position: left, right;
+    transition: top 0.6s, height 0.6s, opacity 0.6s;
+    transition-timing-function: ease;
+}
+
+.card:hover::after {
+    top: 0;
+    height: 100%;
+    opacity: 1;
 }
 
 /* モーダル関連 */
@@ -120,10 +120,16 @@ const closeModal = () => {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0); /* 初期状態は透明 */
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s ease;
+    pointer-events: none;
+}
+.modal-overlay.active {
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: auto;
 }
 
 .modal {
@@ -146,12 +152,10 @@ const closeModal = () => {
 
 .modal h3 {
     margin-bottom: 10px;
-
 }
 
 .modal p {
     font-size: 12px;
-
 }
 
 .content {
@@ -168,36 +172,30 @@ button {
     cursor: pointer;
 }
 
+/* トランジション */
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
-
 .fade-enter-from, .fade-leave-to {
     opacity: 0;
     transform: scale(0.9);
 }
-
 .fade-enter-to, .fade-leave-from {
     opacity: 1;
     transform: scale(1);
 }
 
-
 @media (max-width: 600px) {
-    #works {
-        .title {
-            height: 60px;
-            margin-bottom: 4vw;
-        }
-
-        .card {
-            width: 80%;
-            aspect-ratio: 5 / 3.2;
-        }
-
-        .modal {
-            max-width: 80%;
-        }
+    .title {
+        height: 60px;
+        margin-bottom: 4vw;
+    }
+    .card {
+        width: 80%;
+        aspect-ratio: 5 / 3.2;
+    }
+    .modal {
+        max-width: 80%;
     }
 }
 </style>
