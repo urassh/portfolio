@@ -7,13 +7,6 @@ defineProps<Connection>();
 <template>
     <div id="connection-jem">
         <h3 class="connection-title">{{ title }}</h3>
-
-        <p class="connection-date">
-            <span>{{ begin }}</span>
-            <span>~</span>
-            <span>{{ end }}</span>
-        </p>
-
         <h4 class="connection-position">{{ position }}</h4>
 
         <ul>
