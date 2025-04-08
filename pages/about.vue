@@ -5,7 +5,7 @@
         <div class="container">
             <div class="picture-container">
                 <div class="image-container">
-                    <img src="/public/urassh.jpg" alt="">
+                    <img src="/public/urassh.png" alt="">
                 </div>
             </div>            
 
