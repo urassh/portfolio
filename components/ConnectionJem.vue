@@ -1,42 +1,24 @@
 <script setup lang="ts">
-defineProps({
-    connectionName: {
-        type: String,
-        required: true,
-    },
-    position: {
-        type: String,
-        required: true,
-    },
-    startDate: {
-        type: String,
-        required: true,
-    },
-    endDate: {
-        type: String,
-    },
-    achivements: {
-        type: Array<String>,
-        required: true,
-    },
-});
+import type { Connection } from '~/types/connection';
+
+defineProps<Connection>();
 </script>
 
 <template>
     <div id="connection-jem">
-        <h3 class="connection-title">{{ connectionName }}</h3>
+        <h3 class="connection-title">{{ title }}</h3>
 
         <p class="connection-date">
-            <span>{{ startDate }}</span>
+            <span>{{ begin }}</span>
             <span>~</span>
-            <span>{{ endDate }}</span>
+            <span>{{ end }}</span>
         </p>
 
         <h4 class="connection-position">{{ position }}</h4>
 
         <ul>
-            <li v-for="(achievement, index) in achivements" :key="index">
-                {{ achievement }}
+            <li v-for="(feature, index) in features" :key="index">
+                {{ feature }}
             </li>
         </ul>
     </div>
