@@ -10,7 +10,7 @@ onMounted(async () => {
 
 <template>
     <div id="skill">
-        <img src="/public/skills.png" alt="" class="title">
+        <img src="/skills.png" alt="" class="title">
 
         <div class="container">
             <SkillJem v-for="skill in skills" :key="skill.slug" v-bind="skill" />

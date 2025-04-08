@@ -1,11 +1,11 @@
 <template>
     <div id="about">
-        <img src="/public/about.png" alt="" class="title">
+        <img src="/about.png" alt="" class="title">
 
         <div class="container">
             <div class="picture-container">
                 <div class="image-container">
-                    <img src="/public/urassh.png" alt="">
+                    <img src="/urassh.png" alt="">
                 </div>
             </div>            
 
