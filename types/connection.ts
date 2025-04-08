@@ -2,7 +2,7 @@ export interface Connection {
     slug: string;
     title: string;
     position: string;
-    begim: Date;
-    end: Date;
+    begin: Date;
+    end: Date | undefined;
     features: string[];
 }
