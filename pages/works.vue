@@ -20,7 +20,7 @@ onMounted(async () => {
 
 <template>
     <div id="works">
-        <img src="/works.png" alt="" class="title">
+        <img src="/works.png" alt="works title" class="title" />
         <div class="container">
             <div v-for="work in works" :key="work.slug" class="card" @click="openModal(work)">
                 <img :src="work.image" :alt="work.slug">
