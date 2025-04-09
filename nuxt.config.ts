@@ -26,7 +26,4 @@ export default defineNuxtConfig({
       imageBaseUrl: process.env.IMAGE_BASE_URL || '',
     },
   },
-  experimental: {
-    inlineSSRStyles: false,
-  },
 })
