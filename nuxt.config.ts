@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    preset: 'aws-lambda',
+    preset: 'vercel',
     serveStatic: true,
   },
   runtimeConfig: {
