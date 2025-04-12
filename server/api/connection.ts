@@ -69,7 +69,7 @@ export default defineEventHandler(async (event) => {
             begin: new Date("2025-03-01"),
             end: undefined,
             features: [
-                "24日間の入学試験 Piscine合格",
+                "26日間の入学試験 Piscine合格",
                 "C言語を用いたプログラミング",
             ],
         },
